@@ -1,5 +1,6 @@
-import { TextField, makeStyles, Typography, Button } from '@material-ui/core';
+import { TextField, makeStyles, Typography, Box } from '@material-ui/core';
 import React, { useState } from 'react';
+import CloseIcon from '@material-ui/icons/Close';
 
 const useStyles = makeStyles((theme) => ({
     formItem: {
@@ -11,17 +12,29 @@ const useStyles = makeStyles((theme) => ({
         marginBottom: 40,
         textAlign: 'center',
     },
+    closeIcon: {
+        cursor: 'pointer',
+        '&:hover': {
+            color: '#7d7d7d',
+        },
+    },
 }));
 
-const Form = () => {
+const Form = ({ handleClose }) => {
     const classes = useStyles();
 
     return (
         <>
-            <Typography variant='h3' className={classes.logIn}>
-                Log In
-            </Typography>
-            <form className={classes.form} noValidate autoComplete='off'>
+            <Box display='flex' alignItems='end' justifyContent='space-between'>
+                <Typography variant='h3' className={classes.logIn}>
+                    Welcome
+                </Typography>
+                <CloseIcon
+                    onClick={handleClose}
+                    className={classes.closeIcon}
+                />
+            </Box>
+            <form className={classes.form}>
                 <TextField
                     className={classes.formItem}
                     id='outlined-basic'
@@ -30,9 +43,10 @@ const Form = () => {
                 />
                 <TextField
                     className={classes.formItem}
-                    id='outlined-basic'
+                    id='outlined-password'
                     label='Password'
                     variant='outlined'
+                    type='password'
                 />
             </form>
         </>

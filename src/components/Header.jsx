@@ -1,13 +1,14 @@
 import {
     AppBar,
     Button,
+    Checkbox,
     Container,
     makeStyles,
     Modal,
     Toolbar,
     Typography,
 } from '@material-ui/core';
-import { useState } from 'react';
+import react, { useState } from 'react';
 import { Box } from '@material-ui/core';
 import Form from './Form';
 
@@ -66,6 +67,12 @@ const Header = () => {
         setOpenModal(false);
     };
 
+    const [checked, setChecked] = useState(true);
+
+    const handleChange = (event) => {
+        setChecked(event.target.checked);
+    };
+
     return (
         <div>
             <AppBar position='static' className={classes.nav}>
@@ -87,21 +94,34 @@ const Header = () => {
                                 justifyContent='center'
                             >
                                 <div className={classes.paper}>
-                                    <Form />
-                                    <Button
-                                        color='primary'
-                                        onClick={handleClose}
-                                        size='large'
+                                    <Form handleClose={handleClose} />
+                                    <Box
+                                        display='flex'
+                                        alignItems='center'
+                                        justifyContent='space-between'
                                     >
-                                        Log in
-                                    </Button>
-                                    <Button
-                                        color='secondary'
-                                        onClick={handleClose}
-                                        size='large'
-                                    >
-                                        Cancel
-                                    </Button>
+                                        <Box display='flex' alignItems='center'>
+                                            <Typography
+                                                variant='body2'
+                                                style={{ color: '#333' }}
+                                            >
+                                                Remember me?
+                                            </Typography>
+                                            <Checkbox
+                                                size='small'
+                                                checked={checked}
+                                                onChange={handleChange}
+                                                color='default'
+                                            />
+                                        </Box>
+                                        <Button
+                                            color='primary'
+                                            onClick={handleClose}
+                                            size='large'
+                                        >
+                                            Log in
+                                        </Button>
+                                    </Box>
                                 </div>
                             </Box>
                         </Container>
