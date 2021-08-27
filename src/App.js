@@ -1,7 +1,12 @@
 import { Button } from '@material-ui/core';
+import Header from './components/Header';
 
 function App() {
-    return <div>Hello world</div>;
+    return (
+        <div>
+            <Header />
+        </div>
+    );
 }
 
 export default App;
