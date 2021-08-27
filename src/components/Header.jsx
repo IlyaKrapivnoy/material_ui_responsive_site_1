@@ -8,6 +8,8 @@ import {
     Typography,
 } from '@material-ui/core';
 import { useState } from 'react';
+import { Box } from '@material-ui/core';
+import Form from './Form';
 
 const useStyles = makeStyles((theme) => ({
     nav: {
@@ -32,13 +34,23 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     modal: {
-        backgroundColor: '#eee',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        width: 400,
-        height: 500,
         margin: '0 auto',
+    },
+    paper: {
+        position: 'absolute',
+        width: 340,
+        backgroundColor: theme.palette.background.paper,
+        boxShadow: theme.shadows[5],
+        padding: theme.spacing(2, 4, 3),
+        borderRadius: '6px',
+    },
+    logIn: {
+        color: theme.palette.primary.main,
+        marginBottom: 40,
+        textAlign: 'center',
     },
 }));
 
@@ -67,32 +79,31 @@ const Header = () => {
                     <Button color='inherit' onClick={handleOpen}>
                         Login
                     </Button>
-                    {/* <Modal className={classes.modal}></Modal> */}
-                    <Modal
-                        style={{
-                            top: '20%',
-                        }}
-                        aria-labelledby='spring-modal-title'
-                        aria-describedby='spring-modal-description'
-                        className={classes.modal}
-                        open={openModal}
-                        // onClose={handleClose}
-                        closeAfterTransition
-                        // BackdropComponent={Backdrop}
-                        BackdropProps={{
-                            timeout: 500,
-                        }}
-                    >
+                    <Modal className={classes.modal} open={openModal}>
                         <Container>
-                            <div className={classes.paper}>
-                                <h2 id='spring-modal-title'>Spring modal</h2>
-                                <p id='spring-modal-description'>
-                                    react-spring animates me.
-                                </p>
-                                <Button color='inherit' onClick={handleClose}>
-                                    Close
-                                </Button>
-                            </div>
+                            <Box
+                                display='flex'
+                                alignItems='center'
+                                justifyContent='center'
+                            >
+                                <div className={classes.paper}>
+                                    <Form />
+                                    <Button
+                                        color='primary'
+                                        onClick={handleClose}
+                                        size='large'
+                                    >
+                                        Log in
+                                    </Button>
+                                    <Button
+                                        color='secondary'
+                                        onClick={handleClose}
+                                        size='large'
+                                    >
+                                        Cancel
+                                    </Button>
+                                </div>
+                            </Box>
                         </Container>
                     </Modal>
                 </Toolbar>
