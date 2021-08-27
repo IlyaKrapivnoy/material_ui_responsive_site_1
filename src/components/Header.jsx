@@ -15,6 +15,7 @@ import Form from './Form';
 const useStyles = makeStyles((theme) => ({
     nav: {
         backgroundColor: '#313131',
+        position: 'fixed',
     },
     toolbar: {
         display: 'flex',
