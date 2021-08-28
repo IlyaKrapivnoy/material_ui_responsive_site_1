@@ -18,6 +18,9 @@ import TouchAppIcon from '@material-ui/icons/TouchApp';
 const useStyles = makeStyles((theme) => ({
     sidebar: {
         paddingTop: 80,
+        [theme.breakpoints.down('sm')]: {
+            display: 'none',
+        },
     },
     sidebarTop: {
         display: 'flex',
@@ -63,7 +66,7 @@ const Sidebar = () => {
                 <Avatar
                     alt='User Picture'
                     src='https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg'
-                    square
+                    square='true'
                     className={classes.avatar}
                 />
                 <Box className={classes.userInfo}>
