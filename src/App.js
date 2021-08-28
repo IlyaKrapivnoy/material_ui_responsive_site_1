@@ -8,10 +8,10 @@ function App() {
         <div>
             <Header />
             <Grid container>
-                <Grid item xs={2}>
+                <Grid item md={2}>
                     <Sidebar />
                 </Grid>
-                <Grid item xs={10}>
+                <Grid item xs={12} md={10}>
                     <Content />
                 </Grid>
             </Grid>

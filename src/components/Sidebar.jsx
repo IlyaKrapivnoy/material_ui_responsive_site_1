@@ -18,6 +18,9 @@ import TouchAppIcon from '@material-ui/icons/TouchApp';
 const useStyles = makeStyles((theme) => ({
     sidebar: {
         paddingTop: 80,
+        [theme.breakpoints.down('sm')]: {
+            display: 'none',
+        },
     },
     sidebarTop: {
         display: 'flex',

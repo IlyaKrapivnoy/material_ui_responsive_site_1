@@ -41,9 +41,16 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         justifyContent: 'space-between',
         margin: '40px 0',
+        [theme.breakpoints.down('sm')]: {
+            flexDirection: 'column',
+        },
     },
     card: {
         width: '30%',
+        [theme.breakpoints.down('sm')]: {
+            marginBottom: 20,
+            width: '100%',
+        },
     },
     longCardField: {
         marginBottom: 30,
@@ -56,6 +63,9 @@ const useStyles = makeStyles((theme) => ({
     },
     longCardMedia: {
         width: '30%',
+        [theme.breakpoints.down('sm')]: {
+            display: 'none',
+        },
     },
 }));
 
