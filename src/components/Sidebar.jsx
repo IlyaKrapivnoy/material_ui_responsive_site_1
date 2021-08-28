@@ -16,7 +16,9 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import TouchAppIcon from '@material-ui/icons/TouchApp';
 
 const useStyles = makeStyles((theme) => ({
-    sidebar: { paddingTop: 80 },
+    sidebar: {
+        paddingTop: 80,
+    },
     sidebarTop: {
         display: 'flex',
         justifyContent: 'center',
@@ -42,6 +44,14 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     itemIcon: { paddingRight: 16 },
+    itemText: {
+        fontWeight: '500',
+    },
+
+    accordionSummary: {
+        padding: 0,
+        margin: 0,
+    },
 }));
 
 const Sidebar = () => {
@@ -66,7 +76,12 @@ const Sidebar = () => {
                 </Box>
             </Box>
             <Box className={classes.sidebarMenu}>
-                <Typography variant='caption' display='block' gutterBottom>
+                <Typography
+                    variant='caption'
+                    display='block'
+                    gutterBottom
+                    className={classes.caption}
+                >
                     Reports
                 </Typography>
                 <div className={classes.item}>
@@ -86,7 +101,7 @@ const Sidebar = () => {
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls='panel1a-content'
                         id='panel1a-header'
-                        style={{ padding: 0, margin: 0 }}
+                        className={classes.accordionSummary}
                     >
                         <div
                             className={classes.item}
@@ -120,7 +135,12 @@ const Sidebar = () => {
                 </div>
             </Box>
             <Box className={classes.sidebarMenu}>
-                <Typography variant='caption' display='block' gutterBottom>
+                <Typography
+                    variant='caption'
+                    display='block'
+                    gutterBottom
+                    className={classes.caption}
+                >
                     Applications
                 </Typography>
                 <Accordion
@@ -134,7 +154,7 @@ const Sidebar = () => {
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls='panel1a-content'
                         id='panel1a-header'
-                        style={{ padding: 0, margin: 0 }}
+                        className={classes.accordionSummary}
                     >
                         <div
                             className={classes.item}
