@@ -5,6 +5,7 @@ import {
     makeStyles,
     Typography,
 } from '@material-ui/core';
+import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 
 const useStyles = makeStyles((theme) => ({
     content: { backgroundColor: '#f5f5f5', height: '100vh' },
@@ -24,7 +25,10 @@ const Content = () => {
     return (
         <div className={classes.content}>
             <Container className={classes.container}>
-                <Breadcrumbs aria-label='breadcrumb'>
+                <Breadcrumbs
+                    aria-label='breadcrumb'
+                    separator={<NavigateNextIcon fontSize='small' />}
+                >
                     <Link color='inherit' href='/' onClick={handleClick}>
                         BlackWood
                     </Link>
