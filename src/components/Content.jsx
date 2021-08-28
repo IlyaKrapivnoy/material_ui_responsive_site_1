@@ -45,6 +45,18 @@ const useStyles = makeStyles((theme) => ({
     card: {
         width: '30%',
     },
+    longCardField: {
+        marginBottom: 30,
+    },
+    longCard: {
+        width: '100%',
+    },
+    longCardActionArea: {
+        display: 'flex',
+    },
+    longCardMedia: {
+        width: '30%',
+    },
 }));
 
 const Content = () => {
@@ -154,6 +166,86 @@ const Content = () => {
                                     Lizards are a widespread group of squamate
                                     reptiles, with over 6,000 species, ranging
                                     across all continents except Antarctica
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                    </Card>
+                </Box>
+                <Box className={classes.longCardField}>
+                    <Card className={classes.longCard}>
+                        <CardActionArea className={classes.longCardActionArea}>
+                            <CardMedia
+                                component='img'
+                                alt='Contemplative Reptile'
+                                height='140'
+                                image='https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg'
+                                square='true'
+                                title='Contemplative Reptile'
+                                className={classes.longCardMedia}
+                            />
+                            <CardContent className={classes.longCardContent}>
+                                <Typography
+                                    gutterBottom
+                                    variant='h5'
+                                    component='h2'
+                                >
+                                    Long Card
+                                </Typography>
+                                <Typography
+                                    variant='body2'
+                                    color='textSecondary'
+                                    component='p'
+                                >
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Earum numquam quae sed nam
+                                    ipsum illum nulla quis, aspernatur delectus
+                                    nihil et nobis harum explicabo dicta!
+                                    Voluptatibus, quaerat. Odio atque
+                                    consectetur voluptates perspiciatis aliquid
+                                    cumque libero maxime ipsa. Aliquid magnam
+                                    hic vero modi doloribus. Doloremque
+                                    praesentium dignissimos quo possimus quis.
+                                    Eius sed deserunt suscipit id fuga aliquam.
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                    </Card>
+                </Box>
+                <Box className={classes.longCardField}>
+                    <Card className={classes.longCard}>
+                        <CardActionArea className={classes.longCardActionArea}>
+                            <CardMedia
+                                component='img'
+                                alt='Contemplative Reptile'
+                                height='140'
+                                image='https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg'
+                                square='true'
+                                title='Contemplative Reptile'
+                                className={classes.longCardMedia}
+                            />
+                            <CardContent className={classes.longCardContent}>
+                                <Typography
+                                    gutterBottom
+                                    variant='h5'
+                                    component='h2'
+                                >
+                                    Long Card
+                                </Typography>
+                                <Typography
+                                    variant='body2'
+                                    color='textSecondary'
+                                    component='p'
+                                >
+                                    Lorem ipsum dolor sit amet consectetur
+                                    adipisicing elit. Earum numquam quae sed nam
+                                    ipsum illum nulla quis, aspernatur delectus
+                                    nihil et nobis harum explicabo dicta!
+                                    Voluptatibus, quaerat. Odio atque
+                                    consectetur voluptates perspiciatis aliquid
+                                    cumque libero maxime ipsa. Aliquid magnam
+                                    hic vero modi doloribus. Doloremque
+                                    praesentium dignissimos quo possimus quis.
+                                    Eius sed deserunt suscipit id fuga aliquam.
                                 </Typography>
                             </CardContent>
                         </CardActionArea>
