@@ -4,10 +4,10 @@ const useStyles = makeStyles((theme) => ({
     feed: { backgroundColor: '#f5f5f5', height: '100vh', paddingTop: 80 },
 }));
 
-const Feed = () => {
+const Content = () => {
     const classes = useStyles();
 
-    return <div className={classes.feed}>Feed</div>;
+    return <div className={classes.feed}>Content</div>;
 };
 
-export default Feed;
+export default Content;
