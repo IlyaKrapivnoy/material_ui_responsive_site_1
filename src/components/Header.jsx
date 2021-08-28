@@ -8,13 +8,14 @@ import {
     Toolbar,
     Typography,
 } from '@material-ui/core';
-import react, { useState } from 'react';
+import { useState } from 'react';
 import { Box } from '@material-ui/core';
 import Form from './Form';
 
 const useStyles = makeStyles((theme) => ({
     nav: {
         backgroundColor: '#313131',
+        position: 'fixed',
     },
     toolbar: {
         display: 'flex',
