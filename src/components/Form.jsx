@@ -1,5 +1,4 @@
 import { TextField, makeStyles, Typography, Box } from '@material-ui/core';
-import React, { useState } from 'react';
 import CloseIcon from '@material-ui/icons/Close';
 
 const useStyles = makeStyles((theme) => ({
