@@ -63,7 +63,7 @@ const Sidebar = () => {
                 <Avatar
                     alt='User Picture'
                     src='https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg'
-                    square
+                    square='true'
                     className={classes.avatar}
                 />
                 <Box className={classes.userInfo}>
